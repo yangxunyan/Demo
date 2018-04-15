@@ -12,7 +12,14 @@ input,textarea{outline: auto;}
 table{border-collapse: collapse;}
 textarea{resize: none;overflow: auto;}
 input{border: none;}
+/*公共样式*/
 .lf{float: left;}
 .rt{float: right;}
-.clear{clear: both;}
-/**/
+.clear{content: '';display: block;clear: both;}
+.clear{zoom: 1;}/*IE浏览器*/
+a:active,
+a:hover {
+  outline: 0;
+}
+/*H5标签定义*/
+header,nav,article,search,footer{display: block;}
