@@ -3,7 +3,7 @@
 body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select{
 	margin: 0;padding: 0;
 }
-body{font-size: 12px;font-family: "微软雅黑";}
+body{font-size: 12px;font-family: "微软雅黑";margin-bottom: 30px;}
 em{font-style: normal;}
 li{list-style: none;}
 a{text-decoration: none;}
@@ -15,11 +15,94 @@ input{border: none;}
 /*公共样式*/
 .lf{float: left;}
 .rt{float: right;}
-.clear{content: '';display: block;clear: both;}
+.clear:after{content: '';display: block;clear: both;}
 .clear{zoom: 1;}/*IE浏览器*/
 a:active,
 a:hover {
   outline: 0;
 }
+	/*渐变公共样式*/
+.gradient{
+background:-moz-linear-gradient(top, #FFFFFF, #f8f8f8);
+background:-webkit-linear-gradient(top, #FFFFFF, #f8f8f8);
+background:-ms-linear-gradient(top, #FFFFFF, #f8f8f8);
+background:linear-gradient(top, #FFFFFF, #f8f8f8);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#f8f8f8)";
++background:#f9f9f9;
+}
 /*H5标签定义*/
 header,nav,article,search,footer{display: block;}
+#header{
+	width: 960px;
+	height: 30px;
+	margin: 0 auto;
+	border-radius: 0 0 6px 6px;
+}
+#nav{
+	width: 960px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #444444;	
+}
+#search{
+	width: 958px;
+	height: 114px;
+	border-radius: 6px;
+	border: 1px solid #dbdbdb;
+	margin: 0 auto 10px;
+	
+}
+.content{
+	width: 960px;
+	margin: 0 auto;
+}
+.main{
+	width: 710px;
+}
+
+.section{
+	width: 318px;
+	height: 100px;
+	padding: 0 15px;
+	border-radius: 6px;
+	border: 1px solid #dbdbdb;
+	margin-bottom: 10px;
+}
+.options{
+	width: 350px;
+	height: 100px;
+	background:yellow;
+	border-radius: 6px;
+}
+.main_ad{
+	margin-bottom: 10px;
+	border-radius: 6px;
+	overflow: hidden;
+	
+}
+.side{
+	width: 240px;
+	
+}
+.side_section{
+	border-radius: 6px;
+	border: 1px solid #dbdbdb;
+	height: 60px;
+	margin-bottom: 10px;
+}
+.side_ad{
+	border-radius: 6px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.ad_border{
+	border: 1px solid #dbdbdb;
+}
+.footer{
+	width: 958px;
+	height: 78px;
+	border: 1px solid #dbdbdb;
+	border-radius: 6px;
+	background: #f9f9f9;
+	margin: 0 auto;
+}
