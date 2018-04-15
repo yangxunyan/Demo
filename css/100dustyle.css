@@ -57,6 +57,7 @@ header,nav,article,search,footer,article,section{display: block;}
 	border-radius: 6px;
 	border: 1px solid #dbdbdb;
 	margin: 0 auto 10px;
+	position: relative;
 	
 }
 .content{
@@ -201,8 +202,7 @@ header,nav,article,search,footer,article,section{display: block;}
 	background: url(../img/nav_bg.png) no-repeat;
 }
 #nav li a:hover{text-decoration: underline;}
-#nav .bg1{background-position: 0 0;
-}
+#nav .bg1{background-position: 0 0;}
 #nav .bg2{background-position: -66px 0;}
 #nav .bg3{background-position: -132px 0;}
 #nav .bg4{background-position: -198px 0;}
@@ -223,9 +223,6 @@ header,nav,article,search,footer,article,section{display: block;}
 #nav .bg8:hover{background-position: -462px -70px;}
 #nav .bg9:hover{background-position: -528px -70px;}
 #nav .bg10:hover{background-position: -594px -70px;}
-
-
-
 #nav .nav_l{
 	left: 11px;
 }
@@ -239,4 +236,78 @@ header,nav,article,search,footer,article,section{display: block;}
 	position: relative;
 	top: 10px;
 }
-
+/***********************************搜索栏*/
+#search .bar{
+	width: 958px;
+	height: 64px;
+	border: 1px solid #c40d0e;
+	position: absolute;
+	top: 16px;
+	left: -1px;/*真正定位不会盖住框*/
+	border-radius: 5px;
+	background-color: #e21c01;
+	box-shadow: 3px 3px 2px #d5d5d5;
+}
+#search .menu{
+	position: absolute;
+	left: 226px;
+	top: -27px;
+	
+}
+#search .menu li {
+	float: left;
+	margin-right: 1px;
+	color: #000;
+	font-size: 14px;
+	display: inline-block;
+	text-align: center;
+	line-height: 25px;
+	width: 78px;
+	height: 25px;
+	border: 1px solid #f8d0bf;
+	border-radius: 5px 5px 0 0;
+	border-bottom: none;
+	box-shadow: 1px 0px 2px rgba(176,176,176,0.3);
+}
+#search .menu .active{
+	height: 27px;
+	color: white;
+	font-weight: bold;
+	background: #e21c01;
+	position: relative;
+	border-color: #c40d0e;
+	top: -1px;
+	border-bottom: none;
+	text-shadow: 2px 2px 3px rgba(0,0,0,.25);
+}
+#search .search_img{
+	position: absolute;
+	left: 32px;
+	top: -4px;
+	z-index: 1;
+}
+#search .form{
+	position: absolute;
+	left: 226px;
+	top:36px;
+	z-index: 3;
+}
+#search .form .btn{
+	width: 63px;
+	height: 26px;
+	outline: none;/*去掉input默认样式*/
+	background: url(../img/btn_search.png) no-repeat 0 -7px;
+	float: right;
+}
+#search .form .text{
+	width: 380px;
+	height: 22px;
+	outline: none;
+	padding: 0 12px;	
+	border-radius: 3px;
+	box-shadow: inset 2px 2px 2px rgba(0,0,0,.25);/*内阴影*/
+	float: left;
+	margin-right: 5px;
+	color: #ea7a7a;
+	font-size: 12px;
+}

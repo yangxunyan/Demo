@@ -18,8 +18,12 @@
 					document.createElement("section");
 					document.createElement("search");
 					document.createElement("footer");
-</script>
-
+		</script>
+		<!--PNG背景图片IE6兼容问题解决方法-->
+		<!--<script src="js/DD_belatedPNG_0.0.8a.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG_fix('*');/*统配选择符影响性能*/
+		</script>-->
 </script>
 	</head>
 	<body>
@@ -59,7 +63,24 @@
 				</ul>
 			</nav>
 	<!--搜索区-->
-			<search id="search" class="gradient"></search>
+			<search id="search" class="gradient">
+				<img class="search_img" src="img/search_img-1.png" alt="享乐"/>
+				<div class="bar">
+					<ul class="menu">
+						<li class="active">搜店</li>
+						<li class="gradient">地址</li>
+						<li class="gradient">优惠券</li>
+						<li class="gradient">全文</li>
+						<li  class="gradient">视频</li>
+					</ul>
+				</div>
+				<div class="form">
+					<form action="#">
+						<input type="text" class="text" value="例如：樱花日本料理"/>
+						<input type="submit" value="" class="btn"/>
+					</form>
+				</div>
+			</search>
 	<!--内容区-->
 			<article class="content clear">
 		<!--左边内容-->
