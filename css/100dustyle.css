@@ -71,7 +71,6 @@ header,nav,article,search,footer{display: block;}
 .options{
 	width: 350px;
 	height: 100px;
-	background:yellow;
 	border-radius: 6px;
 }
 .main_ad{
@@ -89,6 +88,7 @@ header,nav,article,search,footer{display: block;}
 	border: 1px solid #dbdbdb;
 	height: 60px;
 	margin-bottom: 10px;
+	padding: 0 12px;
 }
 .side_ad{
 	border-radius: 6px;
@@ -105,4 +105,25 @@ header,nav,article,search,footer{display: block;}
 	border-radius: 6px;
 	background: #f9f9f9;
 	margin: 0 auto;
+}
+.options .tab{
+	height: 34px;
+}
+.options .tab li{
+	width: 172px;
+	height: 33px;
+	border: 1px solid #dbdbdb;
+	border-bottom: none;
+	border-radius: 6px 6px 0 0 ;
+}
+.options .tab .active{
+	width: 172px;
+	height: 34px;
+	background: white;
+}
+.options .cot{
+	width: 348px;
+	height: 80px;
+		border: 1px solid #dbdbdb;
+		border-radius: 0 0 6px 6px ;
 }
