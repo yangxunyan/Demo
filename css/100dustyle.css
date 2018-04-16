@@ -246,7 +246,7 @@ header,nav,article,search,footer,article,section{display: block;}
 	left: -1px;/*真正定位不会盖住框*/
 	border-radius: 5px;
 	background-color: #e21c01;
-	box-shadow: 3px 3px 2px #d5d5d5;
+	box-shadow: 1px 3px 2px #d5d5d5;
 }
 #search .menu{
 	position: absolute;
@@ -310,4 +310,37 @@ header,nav,article,search,footer,article,section{display: block;}
 	margin-right: 5px;
 	color: #ea7a7a;
 	font-size: 12px;
+}
+#search .key_text{
+	width: 220px;
+	line-height: 18px;
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	color:#fff;
+}
+#search .key_text a{color:#fff;
+}
+#search .key_text a:hover{text-decoration: underline;}
+/**********************公共三角形******************/
+.triangle_up{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border:4px solid transparent ;
+	border-bottom-color: #ca0309;
+}
+.triangle_down{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border:4px solid transparent ;
+	border-top-color: #ca0309;
+}
+.triangle_down_gray{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border:4px solid transparent ;
+	border-top-color: c1c1c1;
 }
