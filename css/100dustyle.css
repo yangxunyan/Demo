@@ -587,3 +587,19 @@ color: #c3c3c3;
 .common_list li em span{
 color: #c75d61;
 }
+.common_list .common_list_title{
+	background: none;
+	text-indent:0px;
+}
+.common_list .col1{
+	width: 137px;
+	float: left;
+}
+.common_list .col2{
+	width: 35px;
+	float: left;
+}
+.common_list .col3{
+	width: 36px;
+	float: left;
+}
