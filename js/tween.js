@@ -1,5 +1,4 @@
-// 妙味官网：www.miaov.com
-// 技术交流：bbs.miaov.com
+
 
 $.extend(jQuery.easing,{
 	
