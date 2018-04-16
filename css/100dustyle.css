@@ -70,11 +70,12 @@ header,nav,article,search,footer,article,section{display: block;}
 
 .section{
 	width: 318px;
-	height: 100px;
+/*	height: 100px;*/
 	padding: 0 15px;
 	border-radius: 6px;
 	border: 1px solid #dbdbdb;
 	margin-bottom: 10px;
+	position: relative;
 }
 .options{
 	width: 350px;
@@ -116,17 +117,22 @@ header,nav,article,search,footer,article,section{display: block;}
 }
 .options .tab{
 	height: 34px;
+	position: relative;z-index: 2;
 }
 .options .tab li{
 	width: 172px;
 	height: 33px;
+	line-height: 33px;
 	border: 1px solid #dbdbdb;
 	border-bottom: none;
 	border-radius: 6px 6px 0 0 ;
+	text-align: center;
+	position: relative;
 }
 .options .tab .active{
 	width: 172px;
 	height: 34px;
+	line-height: 34px;
 	background: white;
 }
 .options .cot{
@@ -268,6 +274,7 @@ header,nav,article,search,footer,article,section{display: block;}
 	border-radius: 5px 5px 0 0;
 	border-bottom: none;
 	box-shadow: 1px 0px 2px rgba(176,176,176,0.3);
+	cursor: pointer;
 }
 #search .menu .active{
 	height: 27px;
@@ -322,7 +329,7 @@ header,nav,article,search,footer,article,section{display: block;}
 #search .key_text a{color:#fff;
 }
 #search .key_text a:hover{text-decoration: underline;}
-/**********************公共三角形******************/
+/*****************************公共三角形******************/
 .triangle_up{
 	width: 0;
 	height: 0;
@@ -342,5 +349,129 @@ header,nav,article,search,footer,article,section{display: block;}
 	height: 0;
 	overflow: hidden;
 	border:4px solid transparent ;
-	border-top-color: c1c1c1;
+	border-top-color: #c1c1c1;
+}
+/*************************跟新实时条************************/
+#search .update{
+width: 405px;
+height: 30px;
+position: absolute;
+left: 226px;
+bottom:0px;
+background:url(../img/search_img_update.png) no-repeat 0 7px;
+}
+#search .update ul{
+	width: 336px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+}
+#search .update li{
+	height: 30px;
+	line-height: 30px;
+}
+#search .update a{
+	color: #000000;
+}
+#search .update strong{
+	color: #d30703;
+	font-weight: normal;
+}
+#search .update span{
+	color: #999999;
+}
+#search .wrap{
+	width: 336px;
+	height: 30px;
+	overflow: hidden;
+	position: relative;
+	left: 60px;
+}
+#search .triangle_up{
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+#search .triangle_down{
+	position: absolute;
+	right: 0;
+	top: 17px;
+}
+/************************Side公共样式*/
+.vedio_title{
+	height: 42px;
+	line-height: 42px;
+	background: url(../img/video_bg.gif) no-repeat 105px 10px;
+	font-family: Arial;
+	font-size: 18px;
+	color: #d90000;
+	font-weight: normal;
+}
+.vedio_title sup{
+	position: absolute;
+	top: -10px;
+	font-family: "宋体";
+	font-size: 14px;
+}
+.video{
+	margin-bottom: 13px;
+}
+.vedio_list{
+	padding-left: 75px;
+	height: 78px;
+	background: url(../img/video_bg.gif) no-repeat 3px -47px;
+	
+}
+.vedio_list li{
+	text-indent: 14px;
+	background: url(../img/dot.gif) no-repeat 5px center;
+	line-height: 20px;
+}
+.vedio_list a{
+	color: #4d4d4d;
+	font-size: 12px;
+}
+.vedio_list a:hover{
+	text-decoration: underline;
+}
+/************************Public公共样式*/
+.public_title{
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+}
+.public_title strong{
+	color: #cc0d13;
+	font-family: arial;
+	font-size: 12px;
+	position: absolute;
+	left: 0;
+}
+.public_title span{
+	color: #010000;
+	
+}
+.public_title a{
+	position: absolute;
+	right: 0;
+	top: 11px;
+}
+/************************HOT SHOP样式*/
+.tab li strong{
+	color: #cc0d13;
+	font-family: arial;
+	font-size: 12px;
+}
+.tab li span{
+	color: #010000;
+}
+.tab li .triangle_down{
+	position: absolute;
+	top: 14px;
+	right: 12px;
+}
+.tab li .triangle_down_gray{
+	position: absolute;
+	top: 14px;
+	right: 12px;
 }
