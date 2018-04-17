@@ -722,3 +722,126 @@ width: 273px;
 	float: left;
 	width: 107px;
 }
+.new_title{
+	height: 70px;
+	position: relative;
+	background: url(../img/new_title_bg.gif) no-repeat right 0;
+}
+.new_title span{
+	color: #333;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: arial;
+	top: 36px;
+}
+.new_title strong,.new_title span{
+	position: absolute;
+	left: 24px;
+}
+.new_title strong{
+	font-size: 12px;
+	color: #ea2b31;
+	top: 19px;
+}
+.new_title em{
+	font-size: 36px;
+	font-weight: bold;
+	color: #ec1c16;
+	position: absolute;
+	top:16px ;
+	left: 125px;
+}
+.activity{
+	border: 1px solid #dadada;
+	border-radius:6px ;
+	width: 348px;float: left;
+}
+.recommend{
+	border: 1px solid #dadada;
+	border-radius:6px;
+	width: 348px; float: right;
+}
+.recommend .new_title{
+	background: url(../img/new_title_bg.gif) no-repeat right -70px;
+}
+.activity{}
+.activity .con{
+	padding: 0 23px 0 26px;
+	margin-top: 5px;
+}
+.activity .info{
+	border-top: 1px solid #f3f3f2;
+	overflow: hidden;
+	padding-top: 16px;
+}
+.activity .info_img{
+	padding-top: -1px;
+	overflow: hidden;
+	width: 81px;
+	height: 81px;
+	float: left;
+	border: 2px solid #c61b00;
+}
+.activity .info_text{
+	float: left;
+	margin-left: 8px;
+	position: relative;
+	top: 2px;
+	width: 205px;
+}
+.activity h3{
+	padding-bottom: 6px;
+}
+.activity p{
+	color: #999999;
+	font-size: 12px;
+	height: 17px;
+	line-height: 17px;
+	
+}
+.activity .info h3 em{
+	font-size: 12px;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #d2d2d2;
+	border-radius:4px;
+	color: #d51913;
+}
+.calendar{
+	width: 298px;
+}
+.calendar h3{
+	word-spacing: 10px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	background: url(../img/adorn.gif) repeat-x;
+}
+.calendar h3 span{
+	font-size: 14px;
+	font-family: arial;
+}
+.calendar ol{
+	
+}
+.calendar ol li{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 0 2px 2px 0;
+	background: #ededed;
+	float: left;
+	position: relative;
+	font-weight: bold;
+	color: #666;
+}
+.calendar .normal{
+	background: #f8f8f8;
+	color: #ccc;
+}
+.calendar .active{}
+.calendar img{}
