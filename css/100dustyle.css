@@ -81,6 +81,7 @@ header,nav,article,search,footer,article,section{display: block;}
 	width: 350px;
 	height: 100px;
 	border-radius: 6px;
+	position: relative;
 }
 .main_ad{
 	margin-bottom: 10px;
@@ -136,7 +137,6 @@ header,nav,article,search,footer,article,section{display: block;}
 }
 .options .cot{
 	width: 318px;
-/*	height: 80px;*/
 	border: 1px solid #dbdbdb;
 	border-radius: 0 0 6px 6px ;
 	padding: 0 15px;
@@ -764,7 +764,7 @@ width: 273px;
 .recommend .new_title{
 	background: url(../img/new_title_bg.gif) no-repeat right -70px;
 }
-.activity{}
+.activity,.recommend{margin-bottom: 10px;}
 .activity .con{
 	padding: 0 23px 0 26px;
 	margin-top: 5px;
@@ -773,6 +773,10 @@ width: 273px;
 	border-top: 1px solid #f3f3f2;
 	overflow: hidden;
 	padding-top: 16px;
+}
+.activity .info_img img{
+	width: 81px;
+	height: 81px;
 }
 .activity .info_img{
 	padding-top: -1px;
@@ -812,7 +816,8 @@ width: 273px;
 }
 .calendar{
 	width: 298px;
-	padding-top: 18px;
+	padding: 18px 0 17px;
+	position: relative;
 }
 .calendar h3{
 	word-spacing: 10px;
@@ -826,7 +831,7 @@ width: 273px;
 	font-family: arial;
 }
 .calendar ol{
-	
+	margin-bottom: 14px;
 }
 .calendar ol li{
 	width: 40px;
@@ -844,5 +849,157 @@ width: 273px;
 	background: #f8f8f8;
 	color: #ccc;
 }
-.calendar .active{}
-.calendar img{}
+.calendar .active{
+	width: 36px;
+	height: 36px;
+	border: 2px solid #d30408;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.calendar .img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.today_info{
+	width: 294px;
+	height: 84px;
+	padding: 10px;
+	border: 1px solid #c0c0c0;
+	position: absolute;
+	top: 140px;
+	left: 290px;
+	background: #fff;
+	box-shadow: 4px 4px 0 rgba(0,0,0,.1);
+
+}
+.today_info img{
+	width: 80px;
+	height: 80px;
+	float: left;
+	border: 2px solid #DBDBDB;
+} 
+.today_info .text{
+	width: 200px;
+	float: right;
+} 
+.today_info h4{
+	font-size: 16px;
+	color: #CCCCCC;
+}
+.today_info strong{
+	font-size: 12px;
+	color: #333;
+	vertical-align: middle;
+} 
+.today_info P{
+	color: #999;
+	line-height: 20px;
+}
+.today_info span{
+	width: 8px;
+	height: 14px;
+	overflow:hidden ;/*iE高不得小于19*/
+	position: absolute;
+	left: -8px;
+	top: 40px;
+	background: url(../img/adorn.gif) no-repeat 0 -48px;
+}
+.recommend .pic1{
+	width: 294px;
+	height: 168px;
+	background: #f8f8f8;
+	position: relative;
+	padding:12px 12px 0 ;
+	margin: 5px auto 0;
+	border-radius: 6px;
+}
+.recommend .pic1 ul{
+	width: 223px;
+	height: 133px;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+}
+.recommend .pic1 ul li{
+	width: 223px;
+	height: 133px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.recommend .pic1 ul a{
+	width: 223px;
+	height: 133px;
+}
+.recommend .pic1 ul img{
+	width: 223px;
+	height: 133px;
+}
+.recommend .pic1 ol{
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+.recommend .pic1 ol li{
+	width: 54px;
+	height: 30px;
+	border: 3px solid #fff ;
+}
+.recommend .pic1 ol img{
+	width: 54px;
+	height: 30px;
+}
+.recommend .pic1 ol .active{
+	border: 3px solid #d6191d ;
+}
+.recommend .pic1 p{
+	line-height: 32px;
+	position: absolute;
+	left: 12px;
+	bottom:0px
+}
+.rec_wrap{
+	width: 318px;
+	margin-top: 15px;
+	padding: 0 15px;
+	padding-bottom: 18px;
+}
+.rec_wrap .rec_menu{
+	width: 296px;
+	padding: 0 12px;
+}
+.rec_wrap .rec_menu li{
+	line-height: 27px;
+	height: 27px;
+}
+.rec_wrap .rec_menu a{
+	float: left;
+	padding-left:12px ;
+	color: #454545;
+	background: url(../img/content/recommend_list_ico1.gif) no-repeat 0 8px;
+}
+.rec_wrap .rec_menu em{
+	padding: 0 6px;
+}
+.rec_wrap .rec_menu span{
+	float: right;
+	color:#999999;
+	font-size: 12px;
+}
+.options .con { 
+	width:318px; 
+	height: 295px;
+	padding:0 15px; 
+	border:1px solid #dbdbdb; 
+	border-radius:0 0 6px 6px; 
+	position:absolute; 
+	top:34px; 
+	left:0; 
+	z-index:1; 
+	overflow: hidden;
+}
+.main_wrap { padding-bottom:10px; }
