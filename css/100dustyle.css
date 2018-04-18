@@ -812,6 +812,7 @@ width: 273px;
 }
 .calendar{
 	width: 298px;
+	padding-top: 18px;
 }
 .calendar h3{
 	word-spacing: 10px;
