@@ -1003,3 +1003,29 @@ width: 273px;
 	overflow: hidden;
 }
 .main_wrap { padding-bottom:10px; }
+.bbs{height: 328px;}
+.bbs ul{}
+.bbs ul li{
+	height: 30px;
+	margin-bottom: 3px;
+	background: #F8F8F8;
+}
+.bbs ul strong{
+	color: #D80000;
+}
+.bbs ul strong,.bbs ul a{float: left;}
+.bbs ul img{
+	display: none;
+}
+.bbs ul a{
+	color: #333333;
+}
+.bbs ul span{
+	display: none;
+}
+.bbs ul em{
+	display: none;
+}
+.bbs ul b{
+	color: #666;
+}
