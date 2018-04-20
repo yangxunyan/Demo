@@ -16,7 +16,7 @@ input{border: none;}
 .lf{float: left;}
 .rt{float: right;}
 .clear:after{content: '';display: block;clear: both;}
-.clear { zoom:1; }/*IE浏览器*/
+.clear { zoom:1; }IE浏览器*/
 a:active,
 a:hover {
   outline: 0;
@@ -1003,15 +1003,23 @@ width: 273px;
 	overflow: hidden;
 }
 .main_wrap { padding-bottom:10px; }
+
+/*************BBS论坛***************/
 .bbs{height: 328px;}
 .bbs ul{}
 .bbs ul li{
 	height: 30px;
+	line-height:30px;
 	margin-bottom: 3px;
 	background: #F8F8F8;
+	border-radius: 6px;
+	vertical-align: middle;/*兼容IE性居中显示*/
+	position: relative;
 }
 .bbs ul strong{
 	color: #D80000;
+	text-indent: 10px;
+	width: 45px;
 }
 .bbs ul strong,.bbs ul a{float: left;}
 .bbs ul img{
@@ -1028,4 +1036,76 @@ width: 273px;
 }
 .bbs ul b{
 	color: #666;
+	float: right;
+	font-weight: normal;
+	padding-right: 22px;
+}
+/*高亮显示*/
+.bbs .active{
+	height: 70px;
+	background: #d90000;
+}
+.bbs .active img{
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.bbs .active a{
+	color: #FFFFFF;
+	font-weight: bold;
+	position: absolute;
+	top: 7px;
+	left: 70px;
+}
+.bbs .active span{
+	display: block;
+	color: #fff;
+	position: absolute;
+	top: 33px;
+	left: 70px;
+}
+.bbs .active b{
+	display: none;
+}
+.bbs .active em{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	bottom: -8px;
+	right: 4px;
+	color: #fff;
+}
+.hot_area{
+	height: 258px;
+	
+}
+.hot_area li,.hot_area li img{
+	width: 78px;
+	height: 78px;
+}
+.hot_area .area1,.hot_area .area1 img{
+	width: 156px;
+	height: 78px;
+}
+.hot_area .area2,.hot_area .area2 img{
+	width: 77px;
+	height: 78px;
+}
+.hot_area li{
+	margin: 0 2px 2px 0;
+	float: left;
+	position: relative;
+}
+.hot_area p{
+	width: 144px;
+	height: 66px;
+	padding: 12px 0 0 12px;
+	line-height: 18px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
 }
