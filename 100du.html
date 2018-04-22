@@ -6,9 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/100dustyle.css"/>
 		<link rel="shortcut icon" href="img/100du.ico" /> <!--图标制作-->
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript">
-		
-		</script>
+		<script type="text/javascript" src="js/tween.js"></script>
 		<!--IE  H5标签兼容处理-->
 		<script>
 					document.createElement("nav");
@@ -23,8 +21,117 @@
 		<!--<script src="js/DD_belatedPNG_0.0.8a.js"></script>
 		<script type="text/javascript">
 			DD_belatedPNG_fix('img,div');/*统配选择符影响性能*/-->
+		<script>
+			$(function(){
+				
+				//搜索切换
+				(function(){
+					var aLi=$('#menu').find('li');
+					//初始化：
+					var iNow=0;
+					var oText=$('#search').find('.form .text')
+					var arrText=[
+					'例如：日本料理',
+					'例如：樱花中国料理',
+					'例如：樱花韩国料理',
+					'例如：樱花美国料理',
+					'例如：樱花法国料理',
+					];
+					oText.val(arrText[iNow]);
+					//
+					aLi.each(function(index){
+						$(this).click(function(){
+							aLi.attr('class','gradient');
+							$(this).attr('class','active');
+							iNow=index;
+							oText.val(arrText[iNow]);
+						});
+					})
+					
+					oText.focus(function(){
+						if(oText.val()==arrText[iNow]){
+							oText.val('');
+						}
+					});
+					oText.blur(function(){
+						if(oText.val()==''){
+							oText.val(arrText[iNow]);
+						}
+						
+					})
+				})();
+				
+				
+				
+				
+				//文字滚动;
+				(function(){
+					var oUl=$('.update ul');
+					var iH=0;
+					var oUl=$('.update ul');
+					var str='';
+					var arrData=[
+									{'name':'萱萱','time':3,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/'},
+									{'name':'畅畅','time':4,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/#curriculum'},
+									{'name':'妞妞','time':5,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'慧慧','time':6,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'妞妞','time':7,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'慧慧','time':8,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'妞妞','time':9,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'慧慧','time':10,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'妞妞','time':11,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'},
+									{'name':'慧慧','time':12,'title':'那些灿烂华美的瞬间','url':'http://www.miaov.com/2013/about'}
+									];
+				var str='';
+					var oBtnUp=$('#updateUpBtn');
+					var oBtnDown=$('#updateDownBtn');
+					var iNow=0;
+					var timer=null;
+					
+					for(var i=0;i<arrData.length;i++){
+						str+='<li><a href="'+arrData[i].url+'"><strong>'+arrData[i].name+'</strong><span>'+arrData[i].time+'分钟</span>'+arrData[i].title+'</a></li>';
+					}
+					oUl.html(str);
+					iH=oUl.find('li').height();
+				//oUl.animate({'top':iH*-1},2000,'elasticOut');
+						oBtnUp.click(function(){
+								doMove(-1);
+							});
+						oBtnDown.click(
+							function(){
+								doMove(1)
+							}
+						);
+						function autoPlay(){
+							timer=setInterval(
+								function(){
+									doMove(-1);
+								},2000
+							);
+							
+							
+						};
+						autoPlay();
+						
+					//Math.abs(iNow)；负数转正数		
+					function doMove(num){
+								iNow+=num;
+								if(Math.abs(iNow)>arrData.length-1){
+									iNow=0;
+								}
+								if(iNow>0){
+									iNow=-(arrData.length-1);
+								}
+								oUl.stop().animate({'top':iH*iNow},2000,'elasticOut');
+							}
+					
+					
+				})();	
+			});
 		</script>
-</script>
+			
+		
+
 	</head>
 	<body>
 	<!--头部区-->
@@ -66,7 +173,7 @@
 			<search id="search" class="gradient">
 				<img class="search_img" src="img/search_img-1.png" alt="享乐"/>
 				<div class="bar">
-					<ul class="menu">
+					<ul class="menu" id="menu">
 						<li class="active">搜店</li>
 						<li class="gradient">地址</li>
 						<li class="gradient">优惠券</li>
@@ -74,6 +181,7 @@
 						<li  class="gradient">视频</li>
 					</ul>
 				</div>
+				
 				<div class="form">
 					<form action="#">
 						<input type="text" class="text" value="例如：樱花日本料理"/>
@@ -94,16 +202,12 @@
 					<!--实时跟新-->
 					<div class="wrap">	
 						<ul>
-							<li><a href="#"><strong>王先生</strong> <span>5分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>
-							<li><a href="#"><strong>李先生</strong> <span>6分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>
-							<li><a href="#"><strong>杨先生</strong> <span>7分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>
-							<li><a href="#"><strong>毛先生</strong> <span>7分钟前</span> 写了一篇新文章：那些灿烂华美的瞬间…</a></li>
 						</ul>
 						
 					</div>
 					<!--箭头-->
-						<a href="javascript:;" class="triangle_down"></a>
-						<a href="javascript:;" class="triangle_up"></a>
+						<a id="updateDownBtn" href="javascript:;" class="triangle_down"></a>
+						<a id="updateUpBtn" href="javascript:;" class="triangle_up"></a>
 				</div>
 				
 			</search>
