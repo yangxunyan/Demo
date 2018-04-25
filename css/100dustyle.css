@@ -462,6 +462,9 @@ background:url(../img/search_img_update.png) no-repeat 0 7px;
 	top: 11px;
 }
 /************************HOT SHOP样式*/
+.tab li {
+	cursor: pointer;
+}
 .tab li strong{
 	color: #cc0d13;
 	font-family: arial;
